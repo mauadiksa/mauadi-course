@@ -1,0 +1,16 @@
+title: 'mauadi '
+description: 'mauadi '
+template:
+  repo: mauadi-template
+  name: mauadi
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
